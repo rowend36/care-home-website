@@ -1,0 +1,16 @@
+body {
+  --bs-body-font-family: "Arimo", serif;
+  background: #ffffff;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lora", sans-serif;
+}
+
+.spacer {
+  flex-grow: 1;
+}
