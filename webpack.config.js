@@ -53,6 +53,8 @@ const config = {
       },
     ],
   },
+  target: "web",
+  devtool: "source-map",
   optimization: {
     runtimeChunk: "single",
     splitChunks: {
@@ -64,6 +66,10 @@ const config = {
         },
       },
     },
+  },
+  devServer: {
+    hot: true,
+    static: { directory: path.join(__dirname, "src") },
   },
   plugins: [
     new BundleAnalyzerPlugin({
