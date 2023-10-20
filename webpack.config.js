@@ -82,7 +82,9 @@ const config = {
       template: "src/index.html",
       chunks: ["index"],
     }),
-    new CopyWebpackPlugin([{ patterns: { from: "src/assets", to: "assets" } }]),
+    new CopyWebpackPlugin([
+      { patterns: [{ from: "src/assets", to: "assets" }] },
+    ]),
     new MiniCssExtractPlugin(),
   ],
 };
