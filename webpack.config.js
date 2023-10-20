@@ -22,8 +22,9 @@ const config = {
       },
       {
         test: /\.css$/,
+        exclude: /\.lazy\.css$/i,
         use: [
-          "style-loader",
+          MiniCssExtractPlugin.loader,
           {
             loader: "css-loader",
             options: {
@@ -34,8 +35,18 @@ const config = {
         ],
       },
       {
+        test: /\.lazy\.css$/i,
+        use: [
+          {
+            loader: "style-loader",
+            options: { injectType: "lazySingletonStyleTag" },
+          },
+          "css-loader",
+        ],
+      },
+      {
         test: /\.scss$/,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
       },
       {
         test: /\.svg$/,
