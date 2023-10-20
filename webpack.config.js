@@ -4,6 +4,7 @@ const BundleAnalyzerPlugin =
   require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 const config = {
   entry: {
     index: "./src/index.js",
@@ -81,6 +82,7 @@ const config = {
       template: "src/index.html",
       chunks: ["index"],
     }),
+    new CopyWebpackPlugin([{ from: "src/assets", to: "assets" }]),
     new MiniCssExtractPlugin(),
   ],
 };
