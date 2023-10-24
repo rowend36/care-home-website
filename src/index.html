@@ -6,9 +6,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"> -->
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.1/font/bootstrap-icons.min.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -51,16 +52,53 @@
     </nav>
   </header>
   <main>
-    <div class="landing-img"></div>
-
-    <div class="landing">
-      <h6 class="landing_text">Compassionate Caregivers That You Can Trust</h6>
-      <button class="btn btn-primary mt-4 btn-large">Contact Us</button>
+    <div class="landing-img">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" class="position-absolute bottom-0"
+        style="height:4rem;left:0;width:100%" preserveAspectRatio="none">
+        <path fill="#ffffff" fill-opacity="1"
+          d="M0,320L120,282.7C240,245,480,171,720,149.3C960,128,1200,160,1320,176L1440,192L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z">
+        </path>
+      </svg>
     </div>
-    <div class="container">
-      <div class="row">
+    <div id="carouselExample" class="landing-root carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="landing carousel-item">
+          <div class="landing-content">
+            <h6 class="landing_text">Compassionate Caregivers That You Can Trust</h6>
+            <button class="btn btn-primary mt-4 btn-lg">Contact Us</button>
+          </div>
+        </div>
 
+        <div class="landing carousel-item active">
+          <div class="landing-content">
+            <h6 class="landing_text">Compassionate Caregivers That You Can Trust</h6>
+            <button class="btn btn-primary mt-4 btn-lg">Contact Us</button>
+          </div>
+        </div>
+        <div class="landing carousel-item">
+          <div class="landing-content">
+            <h6 class="landing_text">Compassionate Caregivers That You Can Trust</h6>
+            <button class="btn btn-primary mt-4 btn-lg">Contact Us</button>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
+    </div>
+
+    <div class="container my-section">
+      <div class="row">
+        <div class="col-6">
+          <img src="./assets/daughter_holding_mum.png" class="w-100 curved">
+        </div>
+      </div>
+    </div>
   </main>
   <h1>Hello World</h1>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>

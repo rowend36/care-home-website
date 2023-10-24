@@ -1,5 +1,4 @@
 @import "./css/globals.css";
-
 header {
   background: linear-gradient(to right, white, #fafafa);
 }
@@ -34,7 +33,7 @@ main {
   left: 0;
   right: 0;
   top: 0;
-  height: 92vh;
+  height: calc(40vmax + 4rem);
   width: 100%;
   display: block;
   top: 0;
@@ -45,22 +44,37 @@ main {
   background-attachment: fixed;
   background-repeat: no-repeat;
 }
+
+.landing-root {
+  margin: auto;
+  margin-top: 30vh;
+  max-width: 960px;
+  min-height: calc(40vmax - 30vh);
+}
 .landing {
-  position: relative;
   z-index: 1;
+}
+.landing-content {
   display: flex;
   flex-direction: column;
   color: white;
   justify-content: center;
+  background-color: rgba(30, 20, 0, 0.2);
+  padding: 2em;
+  max-width: 600px;
   width: 100%;
   margin: auto;
-  margin-top: 30vh;
-  max-width: 600px;
-  padding: 2em;
-  background-color: rgba(30, 20, 0, 0.2);
 }
-
 .landing_text {
   font-size: 3em;
   text-shadow: 1px 1px 1px rgba(30, 20, 0, 0.3);
+}
+.curved {
+  border-radius: 4rem;
+  border-top-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.my-section {
+  margin-top: 10rem;
 }
