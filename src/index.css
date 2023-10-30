@@ -47,7 +47,8 @@ main {
 
 .landing-root {
   margin: auto;
-  margin-top: 30vh;
+  margin-top: 10vh;
+  margin-top: max(calc(calc(100vh - 461px) / 2), 1em);
   max-width: 960px;
   min-height: calc(40vmax - 30vh);
 }
@@ -59,8 +60,8 @@ main {
   flex-direction: column;
   color: white;
   justify-content: center;
-  background-color: rgba(30, 20, 0, 0.2);
-  padding: 2em;
+  background-color: rgba(30, 20, 0, 0.5);
+  padding: 3em 4em;
   max-width: 600px;
   width: 100%;
   margin: auto;
@@ -77,4 +78,8 @@ main {
 
 .my-section {
   margin-top: 10rem;
+}
+
+.z-10 {
+  z-index: 10;
 }

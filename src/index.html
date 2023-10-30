@@ -18,16 +18,21 @@
 </head>
 
 <body>
-  <header>
+  <div style="height: 3rem;"></div>
+  <header class="position-fixed top-0 z-10 w-100">
     <nav class="container navbar navbar-expand-lg navbar-light py-1">
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <a class="navbar-brand logo">
-        <img src="./assets/logo_cropped_transparent.png" width="71" height="48">
-        <span class="logo_text">Ma Blessing Healthcare LLC</span>
+        <img src="./assets/logo.png" height="64" alt="May Blessing Healthcare LLC">
       </a>
+      <button class="navbar-toggler" style="visibility: hidden;" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
       <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
         <!-- <div class="spacer"></div> -->
         <ul class="navbar-nav">
@@ -71,13 +76,17 @@
 
         <div class="landing carousel-item active">
           <div class="landing-content">
-            <h6 class="landing_text">Compassionate Caregivers That You Can Trust</h6>
+            <h6 class="landing_text">Trusted Care, Tailored to Your Needs</h6>
+            <p>Experience personalized care at its finest. Our dedicated caregivers at [Your Care Home Name] deliver
+              trusted care uniquely tailored to each individual's needs and preferences.</p>
             <button class="btn btn-primary mt-4 btn-lg">Contact Us</button>
           </div>
         </div>
         <div class="landing carousel-item">
           <div class="landing-content">
             <h6 class="landing_text">Compassionate Caregivers That You Can Trust</h6>
+            <p>At [Your Care Home Name], our compassionate caregivers are not just professionals; they are your extended
+              family, providing unwavering support and care you can rely on for your loved ones' well-being.</p>
             <button class="btn btn-primary mt-4 btn-lg">Contact Us</button>
           </div>
         </div>
@@ -96,6 +105,9 @@
       <div class="row">
         <div class="col-6">
           <img src="./assets/daughter_holding_mum.png" class="w-100 curved">
+        </div>
+        <div>
+          <h3></h3>
         </div>
       </div>
     </div>
