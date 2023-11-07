@@ -4,4 +4,6 @@ import "./setup/normalize_carousel_heights";
 import "./setup/scroll_shrink";
 import "./setup/duplicate";
 
-AOS.init();
+AOS.init({
+  duration: 1300,
+});
