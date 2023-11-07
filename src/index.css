@@ -1,6 +1,11 @@
 @import "./css/globals.css";
-header {
-  background: linear-gradient(to right, white, #fafafa);
+@import "./css/landing.css";
+
+body {
+  background: #ffffff;
+}
+.section-3 {
+  background: linear-gradient(to bottom, #ffffff, white, #fafafa);
 }
 .nav-item {
   margin: 0 0.25em;
@@ -22,53 +27,50 @@ header {
   color: black;
 }
 
+.welcome {
+  font-size: 4rem;
+  /* text-align: center; */
+  color: #414141;
+  margin: 10rem 0 0;
+  text-transform: uppercase;
+  @media screen and (max-width: 600px) {
+    & {
+      font-size: 2rem;
+    }
+  }
+  /* background: url("./assets/logo.png"), url("./assets/logo.png"); */
+  /* background-size: 10% auto; */
+  /* background-position:
+    100% center,
+    0% center;
+  background-repeat: no-repeat; */
+}
+
+.boulder-text {
+  font-size: large;
+  margin-top: 24px;
+}
+
+.my-section-article {
+  margin: 14rem 0;
+}
+
+.my-section-article:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.welcome > img {
+  opacity: 0.25;
+  margin: 3rem 0;
+  /* filter: invert(23%) sepia(51%) saturate(3938%) hue-rotate(235deg) */
+  /* brightness(113%) contrast(104%); */
+  max-width: 100%;
+}
 /* Main */
 main {
   position: relative;
   width: 100%;
   padding-top: 0.1px;
-}
-.landing-img {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  height: calc(40vmax + 4rem);
-  width: 100%;
-  display: block;
-  top: 0;
-  background: url("./assets/aged-woman-sitting-park-grandma-white-hat.jpg");
-  background-color: antiquewhite;
-  background-size: cover;
-  background-position: 50% 25%;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-}
-
-.landing-root {
-  margin: auto;
-  margin-top: 10vh;
-  margin-top: max(calc(calc(100vh - 461px) / 2), 1em);
-  max-width: 960px;
-  min-height: calc(40vmax - 30vh);
-}
-.landing {
-  z-index: 1;
-}
-.landing-content {
-  display: flex;
-  flex-direction: column;
-  color: white;
-  justify-content: center;
-  background-color: rgba(30, 20, 0, 0.5);
-  padding: 3em 4em;
-  max-width: 600px;
-  width: 100%;
-  margin: auto;
-}
-.landing_text {
-  font-size: 3em;
-  text-shadow: 1px 1px 1px rgba(30, 20, 0, 0.3);
 }
 .curved {
   border-radius: 4rem;
@@ -77,9 +79,27 @@ main {
 }
 
 .my-section {
-  margin-top: 10rem;
+  margin-top: 4rem;
 }
 
 .z-10 {
   z-index: 10;
+}
+
+.duplicated {
+  position: absolute;
+  display: block;
+  z-index: -1;
+  filter: blur(10px);
+  opacity: 0.8;
+  left: 3px;
+  top: 3px;
+}
+
+.logo {
+  padding: 1rem 0;
+  transition: padding 0.3s;
+}
+.is-scrolled .logo {
+  padding: 0.1rem 0;
 }

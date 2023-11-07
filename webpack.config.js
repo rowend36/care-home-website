@@ -52,17 +52,17 @@ const config = {
         test: /\.svg$/,
         use: "file-loader",
       },
-      {
-        test: /\.png$/,
-        use: [
-          {
-            loader: "url-loader",
-            options: {
-              mimetype: "image/png",
-            },
-          },
-        ],
-      },
+      // {
+      //   test: /\.png$/,
+      //   use: [
+      //     {
+      //       loader: "url-loader",
+      //       options: {
+      //         mimetype: "image/png",
+      //       },
+      //     },
+      //   ],
+      // },
     ],
   },
   target: "web",
