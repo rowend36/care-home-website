@@ -5,6 +5,8 @@ const BundleAnalyzerPlugin =
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const ImageMinimizerPlugin = require("image-minimizer-webpack-plugin");
+
 const config = {
   entry: {
     index: "./src/index.js",
@@ -63,6 +65,10 @@ const config = {
       //     },
       //   ],
       // },
+      {
+        test: /\.(jpe?g|png)$/i,
+        type: "asset",
+      },
     ],
   },
   target: "web",
@@ -78,6 +84,19 @@ const config = {
         },
       },
     },
+    minimizer: [
+      new ImageMinimizerPlugin({
+        minimizer: {
+          implementation: ImageMinimizerPlugin.sharpMinify,
+          options: {
+            encodeOptions: {
+              // Your options for `sharp`
+              // https://sharp.pixelplumbing.com/api-output
+            },
+          },
+        },
+      }),
+    ],
   },
   devServer: {
     hot: true,
@@ -93,7 +112,7 @@ const config = {
       template: "src/index.html",
       chunks: ["index"],
     }),
-    new CopyWebpackPlugin({ patterns: [{ from: "src/assets", to: "assets" }] }),
+    // new CopyWebpackPlugin({ patterns: [{ from: "src/assets", to: "assets" }] }),
     new MiniCssExtractPlugin(),
   ],
 };
