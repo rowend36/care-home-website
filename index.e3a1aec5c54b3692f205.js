@@ -83,7 +83,10 @@ window.addEventListener("load", function once() {
 /***/ 304:
 /***/ (() => {
 
-window.addEventListener("scroll", function () {
+window.addEventListener("DOMContentLoaded", function () {
+  window.addEventListener("scroll", function () {
+    this.document.body.classList.toggle("is-scrolled", window.scrollY > 0);
+  });
   this.document.body.classList.toggle("is-scrolled", window.scrollY > 0);
 });
 
@@ -95,4 +98,4 @@ window.addEventListener("scroll", function () {
 /******/ var __webpack_exports__ = (__webpack_exec__(579));
 /******/ }
 ]);
-//# sourceMappingURL=index.2c2e697bf4e5e31ac697.js.map
+//# sourceMappingURL=index.e3a1aec5c54b3692f205.js.map

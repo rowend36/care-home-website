@@ -46,7 +46,7 @@ h6 {
   min-height: calc(40vmax - 30vh);
   @media screen and (max-width: 600px) {
     & {
-      margin: calc(calc(100vh - 35rem) / 2) auto;
+      margin: calc(calc(100vh - 35rem) / 2) auto 5rem;
       max-width: 480px;
     }
   }
@@ -56,15 +56,17 @@ h6 {
 }
 .landing-content {
   display: flex;
+  font-size: 1.167rem;
   flex-direction: column;
-  color: white;
+  color: #ffffff;
   justify-content: flex-start;
   background-color: rgba(30, 20, 0, 0.5);
-  padding: 3em 4em 1.5em;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 3em 3em 1.5em;
   max-width: 600px;
   width: 100%;
   margin: auto;
-  min-height: 70vmin;
+  min-height: 10rem;
   @media screen and (max-width: 600px) {
     & {
       padding: 2em 2.5em 1.5em;
@@ -73,7 +75,8 @@ h6 {
 }
 
 .landing_text {
-  font-size: 2.25em;
+  font-size: 2.75rem;
+  color: white;
   -webkit-hyphens: auto;
           hyphens: auto;
   word-break: break-word;
@@ -129,6 +132,7 @@ body {
   @media screen and (max-width: 600px) {
     & {
       font-size: 2rem;
+      margin-top: 4rem;
     }
   }
   /* background: url("./assets/logo.png"), url("./assets/logo.png"); */
@@ -142,6 +146,7 @@ body {
 .boulder-text {
   font-size: large;
   margin-top: 24px;
+  margin-bottom: 24px;
 }
 
 .my-section-article {
@@ -172,7 +177,7 @@ main {
 }
 
 .my-section {
-  margin-top: 4rem;
+  margin-top: 5rem;
 }
 
 .z-10 {
@@ -195,6 +200,18 @@ main {
 }
 .is-scrolled .logo {
   padding: 0.1rem 0;
+}
+
+.is-scrolled > header {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.about-us {
+  background-color: #414141;
+}
+
+small {
+  opacity: 0.9;
 }
 
 
