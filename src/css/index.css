@@ -1,5 +1,5 @@
-@import "./css/globals.css";
-@import "./css/landing.css";
+@import "./globals.css";
+@import "./landing.css";
 
 body {
   background: #ffffff;
@@ -36,6 +36,7 @@ body {
   @media screen and (max-width: 600px) {
     & {
       font-size: 2rem;
+      margin-top: 4rem;
     }
   }
   /* background: url("./assets/logo.png"), url("./assets/logo.png"); */
@@ -49,6 +50,7 @@ body {
 .boulder-text {
   font-size: large;
   margin-top: 24px;
+  margin-bottom: 24px;
 }
 
 .my-section-article {
@@ -79,7 +81,7 @@ main {
 }
 
 .my-section {
-  margin-top: 4rem;
+  margin-top: 5rem;
 }
 
 .z-10 {
@@ -102,4 +104,16 @@ main {
 }
 .is-scrolled .logo {
   padding: 0.1rem 0;
+}
+
+.is-scrolled > header {
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.about-us {
+  background-color: #414141;
+}
+
+small {
+  opacity: 0.9;
 }

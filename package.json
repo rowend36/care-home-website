@@ -6,7 +6,8 @@
   "scripts": {
     "clean": "rm dist/bundle.js",
     "build": "webpack --mode production && node scripts/optimize-images.js",
-    "start": "npx webpack serve --mode development",
+    "start": "webpack serve --mode development",
+    "dev": "npm start",
     "gh-pages": "git subtree push --prefix dist origin gh-pages",
     "test": "mocha"
   },
