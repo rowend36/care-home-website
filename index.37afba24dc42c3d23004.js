@@ -26,11 +26,13 @@ AOS.init({
 
 var x = document.querySelectorAll(".duplicate");
 x.forEach(function (el) {
-  var node = el.cloneNode();
-  node.setAttribute("aria-hidden", true);
-  node.classList.add("duplicated");
-  el.parentElement.classList.add("position-relative");
-  el.parentElement.appendChild(node);
+  el.addEventListener("load", function () {
+    var node = el.cloneNode();
+    node.setAttribute("aria-hidden", true);
+    node.classList.add("duplicated");
+    el.parentElement.classList.add("position-relative");
+    el.parentElement.appendChild(node);
+  });
 });
 
 /***/ }),
@@ -98,4 +100,4 @@ window.addEventListener("DOMContentLoaded", function () {
 /******/ var __webpack_exports__ = (__webpack_exec__(579));
 /******/ }
 ]);
-//# sourceMappingURL=index.e3a1aec5c54b3692f205.js.map
+//# sourceMappingURL=index.37afba24dc42c3d23004.js.map
