@@ -93,6 +93,7 @@ main {
   display: block;
   z-index: -1;
   filter: blur(10px);
+  padding: inherit;
   opacity: 0.8;
   left: 3px;
   top: 3px;
@@ -116,4 +117,14 @@ main {
 
 small {
   opacity: 0.9;
+}
+
+.services-image {
+  height: 50vh;
+  max-height: 50vw;
+  min-height: 35vw;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: lavender;
+  background-image: url("../assets/senior-man-volunteer-nurse-support-caregiver-help-with-elderly-medical-nursing-home-smile-happy-trust-community-employee-working-healthcare-charity-house.png");
 }
