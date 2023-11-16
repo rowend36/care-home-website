@@ -21,11 +21,20 @@ h6 {
   flex-grow: 1;
 }
 
+.stack {
+  display: flex;
+}
+
+.stack > div {
+  position: relative;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.stack > div:nth-child(2) {
+  right: 100%;
+}
 .landing-img {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 84px;
   height: calc(65vmax + 4rem);
   max-height: 100vh;
   width: 100%;
@@ -46,7 +55,7 @@ h6 {
   min-height: calc(40vmax - 30vh);
   @media screen and (max-width: 600px) {
     & {
-      margin: calc(calc(100vh - 35rem) / 2) auto 5rem;
+      margin: max(calc(calc(100vh - 35rem) / 2), 3rem) auto 5rem;
       max-width: 480px;
     }
   }
@@ -189,6 +198,7 @@ main {
   display: block;
   z-index: -1;
   filter: blur(10px);
+  padding: inherit;
   opacity: 0.8;
   left: 3px;
   top: 3px;
@@ -212,6 +222,16 @@ main {
 
 small {
   opacity: 0.9;
+}
+
+.services-image {
+  height: 50vh;
+  max-height: 50vw;
+  min-height: 35vw;
+  background-size: cover;
+  background-attachment: fixed;
+  background-color: lavender;
+  background-image: url(ec50f1f3e7d3ce8a6c3b.png);
 }
 
 
